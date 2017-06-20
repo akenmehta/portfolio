@@ -178,6 +178,8 @@ h1 {
   @media (max-width: 540px) {
     h1 {
       font-size: 35px; } }
+  h1 span {
+    color: #fdcd3b; }
 
 h2 {
   padding-bottom: 25px;
@@ -229,8 +231,8 @@ nav {
       -ms-flex-pack: center;
           justify-content: center; }
 
-.about-section, .skills-section, .projects-section {
-  padding: 50px 0; }
+.about-section, .skills-section, .projects-section, .contact-section {
+  padding-top: 50px; }
 
 /* About Section  */
 .about-me {
@@ -248,21 +250,36 @@ nav {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column; } }
+  .about-me img {
+    width: 50%;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto; }
 
-.left-about-me, .right-about-me {
+.left-about-me {
+  width: 40%; }
+  @media (max-width: 600px) {
+    .left-about-me {
+      padding: 0 20px;
+      width: 100%; } }
+
+.right-about-me {
+  width: 55%;
   padding: 10px;
   line-height: 1.4em;
   font-size: 16px; }
   @media (max-width: 600px) {
-    .left-about-me, .right-about-me {
-      padding: 0 20px; } }
+    .right-about-me {
+      padding: 0 30px;
+      width: 100%; } }
 
-.left-about-me {
-  text-align: right;
+.about-main {
   font-weight: 800;
-  font-size: 19px; }
+  font-size: 18px;
+  text-align: right;
+  padding: 10px; }
   @media (max-width: 600px) {
-    .left-about-me {
+    .about-main {
       text-align: left; } }
 
 /*  Skills section  */
@@ -288,6 +305,12 @@ nav {
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 0.1em; }
+  .skills img {
+    width: 50px;
+    height: 50px; }
+  @media (max-width: 450px) {
+    .skills div:nth-of-type(7) {
+      display: none; } }
 
 /*  Projects section  */
 .project-image {
@@ -355,21 +378,20 @@ nav {
     border: 1px solid #000; }
 
 /* Contact Section */
-.contact-section {
-  padding: 25px; }
-  .contact-section h3 {
-    text-align: center;
-    margin-bottom: 50px; }
-  .contact-section input, .contact-section textarea {
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    border: none;
-    border-bottom: 1px solid #b8bac0;
-    outline: none; }
-    @media (max-width: 540px) {
-      .contact-section input, .contact-section textarea {
-        width: 80%; } }
+.contact-section h3 {
+  text-align: center;
+  margin-bottom: 50px; }
+
+.contact-section input, .contact-section textarea {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid #b8bac0;
+  outline: none; }
+  @media (max-width: 540px) {
+    .contact-section input, .contact-section textarea {
+      width: 80%; } }
 
 form {
   display: -webkit-box;
