@@ -131,6 +131,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+/* general*/
 body {
   font-family: 'Raleway'; }
 
@@ -172,6 +173,80 @@ a {
           -ms-flex-order: 1;
               order: 1; } }
 
+h2 {
+  padding-bottom: 25px;
+  font-size: 40px;
+  text-align: center; }
+  h2 span {
+    font-weight: normal; }
+
+.about-section, .skills-section, .projects-section, .contact-section {
+  padding: 40px 0; }
+
+/* Nav Bar */
+#burger-container {
+  position: fixed;
+  top: 15px;
+  right: 15px; }
+
+#burger {
+  cursor: pointer;
+  display: block; }
+
+#burger span {
+  background: #fdcd3b;
+  display: block;
+  width: 35px;
+  height: 3px;
+  margin-bottom: 5px;
+  position: relative;
+  top: 0;
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s; }
+
+#burger-container.open span:nth-child(2),
+#burger-container.open span:nth-child(3) {
+  width: 20px;
+  opacity: 0; }
+
+#burger-container.open span:nth-child(4) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: -8px; }
+
+#burger-container.open span:nth-child(1) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 16px; }
+
+.display {
+  display: none; }
+
+nav {
+  position: fixed;
+  top: 50px;
+  right: 15px; }
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 0;
+    margin: 0; }
+  nav li {
+    list-style-type: none;
+    color: #fff;
+    padding: 10px 30px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 800;
+    border-bottom: 1px solid #111; }
+
+/* Banner Image and text */
 h1 {
   font-size: 50px;
   text-align: center; }
@@ -180,37 +255,6 @@ h1 {
       font-size: 35px; } }
   h1 span {
     color: #fdcd3b; }
-
-h2 {
-  padding-bottom: 25px;
-  font-size: 40px;
-  text-align: center; }
-  h2 span {
-    font-weight: normal; }
-
-/* Nav Bar*/
-nav {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  background: rgba(255, 255, 255, 0.5); }
-  nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    padding: 0;
-    margin: 0; }
-  nav li {
-    list-style-type: none;
-    color: #fff;
-    padding: 10px 25px;
-    width: 25%;
-    font-size: 14px;
-    text-align: center;
-    font-weight: 800; }
-    @media (max-width: 450px) {
-      nav li {
-        font-size: 12px; } }
 
 .hero {
   height: 100vh;
@@ -230,9 +274,6 @@ nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
-
-.about-section, .skills-section, .projects-section, .contact-section {
-  padding: 40px 0; }
 
 /* About Section  */
 .about-me {
@@ -415,6 +456,9 @@ form {
         width: 80%; } }
   form input[name=name] {
     margin-bottom: 55px; }
+    @media (max-width: 540px) {
+      form input[name=name] {
+        margin-bottom: 20px; } }
   @media (max-width: 540px) {
     form {
       -webkit-box-orient: vertical;
@@ -427,7 +471,7 @@ form {
 /* footer section*/
 footer {
   text-align: center; }
-  footer a {
+  footer .footer-icons a {
     font-size: 25px;
     margin: 0 20px; }
   footer i {
@@ -435,3 +479,6 @@ footer {
     transition: all 0.7s; }
     footer i:hover {
       color: #fdcd3b; }
+  footer p a {
+    border-bottom: 1px solid #000;
+    font-size: 16px; }
