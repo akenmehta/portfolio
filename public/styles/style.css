@@ -217,8 +217,8 @@ nav {
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(19, 18, 17, 0.82)), to(rgba(31, 31, 27, 0.28))), url(../../images/hero-bg.jpg);
-  background-image: linear-gradient(rgba(19, 18, 17, 0.82), rgba(31, 31, 27, 0.28)), url(../../images/hero-bg.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(19, 18, 17, 0.82)), to(rgba(31, 31, 27, 0.28))), url(../../images/hero.jpg);
+  background-image: linear-gradient(rgba(19, 18, 17, 0.82), rgba(31, 31, 27, 0.28)), url(../../images/hero.jpg);
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -232,7 +232,7 @@ nav {
           justify-content: center; }
 
 .about-section, .skills-section, .projects-section, .contact-section {
-  padding-top: 50px; }
+  padding: 40px 0; }
 
 /* About Section  */
 .about-me {
@@ -401,8 +401,20 @@ form {
       flex-wrap: wrap; }
   form .form-left, form .form-right {
     width: 50%; }
+  form input, form textarea {
+    display: inline-block;
+    width: 80%; }
+  form input[type=submit] {
+    width: 15%;
+    margin-top: 20px; }
+    @media (max-width: 600px) {
+      form input[type=submit] {
+        width: 25%; } }
+    @media (max-width: 540px) {
+      form input[type=submit] {
+        width: 80%; } }
   form input[name=name] {
-    margin-bottom: 60px; }
+    margin-bottom: 55px; }
   @media (max-width: 540px) {
     form {
       -webkit-box-orient: vertical;
